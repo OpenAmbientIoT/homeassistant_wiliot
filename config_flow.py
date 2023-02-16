@@ -17,7 +17,7 @@ DATA_SCHEMA = vol.Schema({
 })
 
 
-class AirtouchConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
+class PixelConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a Wiliot config flow."""
 
     VERSION = 1
