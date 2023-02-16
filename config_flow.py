@@ -54,7 +54,7 @@ class AirtouchConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         return self.async_create_entry(
             title=user_input[CONF_USERNAME],
             data={
-                CONF_URL: user_input[CONF_USERNAME]
+                CONF_URL: user_input[CONF_USERNAME],
                 CONF_USERNAME: user_input[CONF_USERNAME]
-            },
+            }
         )
