@@ -1,4 +1,3 @@
-import json
 import logging
 
 from wiliot_api.platform.platform import PlatformClient
@@ -13,6 +12,7 @@ class wiliot_client:
         self.username = username
         self.client = PlatformClient(api_key=api_key, owner_id=username)
         self.max_pixels = max_pixels
+        self._logger = logging.getLogger(__name__)
     
 
     def get_pixels(self, max_pixels=500):
@@ -29,9 +29,9 @@ class wiliot_client:
         
 
     def get_asset(self, asset_id=None):
-        # TODO: Consider switching to null results and logging over raising value errors
         if not asset_id:
-            raise ValueError("Must provide asset ID to retrieve individual assets!")
+            self._logger.debug("No Wiliot assets found.")
+            return {}
         
         return self.client.get_asset(asset_id)
 
