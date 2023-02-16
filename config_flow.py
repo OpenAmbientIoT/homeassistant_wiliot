@@ -58,3 +58,8 @@ class PixelConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 CONF_USERNAME: user_input[CONF_USERNAME]
             }
         )
+
+    async def async_setup_entry(*args, **kwargs):
+        print(args)
+        print(kwargs)
+        return {}
