@@ -1,0 +1,8 @@
+{
+    "domain": "wiliot",
+    "name": "Wiliot Pixel",
+    "config_flow": true,
+    "requirements": ["wiliot-api>=4.0.2"],
+    "iot_class": "assumed_state",
+    "version": "0.1.0"
+}
