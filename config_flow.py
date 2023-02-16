@@ -16,6 +16,8 @@ DATA_SCHEMA = vol.Schema({
     vol.Optional(CONF_COUNT): int
 })
 
+async def get_wiliot_pixels(url, api_key, username):
+    return wiliot_client(url=url, api_key=api_key, username=username)
 
 class PixelConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a Wiliot config flow."""
@@ -40,8 +42,7 @@ class PixelConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             CONF_USERNAME: username
         })
 
-        wc = wiliot_client(url=url, api_key=api_key, username=username)
-        wiliot_pixels = wc.get_pixels()
+        wiliot_pixels = get_wiliot_client(url=url, api_key=api_key, username=username)
 
         if not wiliot_pixels:
             errors["base"] = "no_pixels"
