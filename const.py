@@ -1,1 +1,1 @@
-DOMAIN = "Wiliot"
+DOMAIN = "wiliot"
