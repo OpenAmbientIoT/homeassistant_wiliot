@@ -2,6 +2,8 @@
 from twiliot import wiliot_client
 import voluptuous as vol
 
+from .const import DOMAIN
+
 from homeassistant import config_entries
 from homeassistant.const import CONF_URL, CONF_API_KEY, CONF_USERNAME, CONF_COUNT
 
@@ -15,7 +17,7 @@ DATA_SCHEMA = vol.Schema({
 })
 
 
-class AirtouchConfigFlow(config_entries.ConfigFlow, domain="wiliot"):
+class AirtouchConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a Wiliot config flow."""
 
     VERSION = 1
