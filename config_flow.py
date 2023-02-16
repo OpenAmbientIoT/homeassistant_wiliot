@@ -1,5 +1,5 @@
 """Config flow for Wiliot Pixel"""
-from wiliot import wiliot_client
+from .wiliot import wiliot_client
 import voluptuous as vol
 
 from .const import DOMAIN
