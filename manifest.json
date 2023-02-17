@@ -1,0 +1,17 @@
+{
+  "domain": "wiliot",
+  "name": "Wiliot",
+  "codeowners": [
+    "@ezfman"
+  ],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://www.home-assistant.io/integrations/wiliot",
+  "homekit": {},
+  "iot_class": "cloud_polling",
+  "requirements": [
+    "wiliot-api==4.0.2"
+  ],
+  "ssdp": [],
+  "zeroconf": []
+}
