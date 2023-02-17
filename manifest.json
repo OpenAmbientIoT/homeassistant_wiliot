@@ -13,5 +13,6 @@
     "wiliot-api==4.0.2"
   ],
   "ssdp": [],
-  "zeroconf": []
+  "zeroconf": [],
+  "version": "0.1.0"
 }
